@@ -1,1 +1,24 @@
-1
+http://d.hatena.ne.jp/hnw/touch/20110528/
+http://nirasan.hatenablog.com/entry/2012/11/21/003714
+
+git remote add hiroton9 git@github.com:hiroton9/test.git
+git fetch hiroton9
+git checkout -b a origin/a
+git checkout -b a-work origin/a
+
+git add
+git commit
+
+git checkout a
+git merge hiroton9/a
+
+
+git checkout a-work
+git rebase a a-work (コンフリクト！）
+
+git checkout a
+git rebase a-work a
+git log --oneline
+git push origin a
+
+
